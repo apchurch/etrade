@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+		<link rel='stylesheet' href='/public/css/main.css'/>
+	</head>
+	<body>
+		 <div id="app">
+        <h3 class="frontTitle">Create Account</h3>
+        <form class="form" v-on:submit="createUser">
+            <input v-model="newUserName" placeholder="  Name">
+            <input v-model="newUserPassword" placeholder="Password">
+            <input type="submit" value="Submit" class="btn btn-sm btnColor">
+        </form>
+        <h3 class="frontTitle">Login</h3>
+        <form class="form" v-on:submit="signInUser">
+            <input v-model="oldUserName" placeholder="Name">
+            <input v-model="oldUserPassword" placeholder="Password">
+            <input type="submit" value="Login" class="btn btn-sm btnColor">
+        </form> 
+	</div>
+		<video autoplay id="my-video" class="video" muted loop> 
+  <source src="media/demo.mp4" type="video/mp4">
+  <source src="media/demo.ogv" type="video/ogg">
+  <source src="media/demo.webm" type="video/webm">
+</video><!-- /video from https://coverr.co/-->
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+  /**
+   * Check if video can play, and play it
+   * https://coverr.co/
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
+
+
+
+
+		<script src="/public/js/main.js"></script>
+	</body>
+</html>
